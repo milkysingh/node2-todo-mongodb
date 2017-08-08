@@ -15,11 +15,11 @@ MongoClient.connect("mongodb://localhost:27017/TodoApp", (err, db) => {
     //     }
     //     console.log(JSON.stringify(result.ops, undefined, 2));
     // })
-    // db.collection("Users").insertOne({name:"Malkeet",age:20,location:"Jammu,India"},(err,result)=>{
-    //     if(err){
-    //         return console.log("Unable to insert data"+err);
-    //     }
-    //      console.log(JSON.stringify(result.ops[0]._id.getTimestamp(), undefined, 2));
-    // });
+    db.collection("Users").insertOne({name:"Riya",age:20,location:"Jammu,India"},(err,result)=>{
+        if(err){
+            return console.log("Unable to insert data"+err);
+        }
+         console.log(JSON.stringify(result.ops[0]._id.getTimestamp(), undefined, 2));
+    });
     db.close();
 });
